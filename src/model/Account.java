@@ -1,12 +1,14 @@
 package model;
 
+import java.math.BigDecimal;
+
 public class Account {
 
     private String id;
-    private double balance;
+    private BigDecimal balance;
     private String customerName;
 
-    public Account(String id, double balance, String customerName) {
+    public Account(String id, BigDecimal balance, String customerName) {
         this.id = id;
         this.balance = balance;
         this.customerName = customerName;
@@ -20,7 +22,7 @@ public class Account {
         this.id = id;
     }
 
-    public void setBalance(double balance) {
+    public void setBalance(BigDecimal balance) {
         this.balance = balance;
     }
 
@@ -28,7 +30,7 @@ public class Account {
         this.customerName = customerName;
     }
 
-    public double getBalance() {
+    public BigDecimal getBalance() {
 
         return balance;
     }
@@ -38,6 +40,6 @@ public class Account {
     }
 
     public boolean isNegativeOrZeroBalance(){
-        return this.balance>0?false:true ;
+        return this.balance.compareTo(BigDecimal.ZERO)==1?false:true ;
     }
 }
