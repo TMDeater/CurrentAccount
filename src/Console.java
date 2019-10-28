@@ -80,13 +80,11 @@ public class Console {
             input = scanner.nextLine();
             switch (input){
                 case "1":   //Deposit
-                    Print("Please input the amount to be deposited: ");
-                    input = scanner.nextLine();
+                    input = AskInputAmount(0, scanner, input);
                     accountManage.Deposit(accountManage.getSelectedAccountId(), new BigDecimal(input));
                     break;
                 case "2":   //Withdraw
-                    Print("Please input the amount to be withdrawn: ");
-                    input = scanner.nextLine();
+                    input = AskInputAmount(1, scanner, input);
                     accountManage.Withdraw(accountManage.getSelectedAccountId(), new BigDecimal(input));
                     break;
                 case "3":
@@ -99,5 +97,24 @@ public class Console {
             }
             System.out.println(" ");
         } while(askInput==-1);
+    }
+
+    private static String AskInputAmount(int mode, Scanner scanner, String input) {
+        String temp=new String();
+        if (mode==0)
+            temp="deposited";
+        else if (mode==1)
+            temp="withdrawn";
+        while(true){
+            Print("Please input the amount to be " + temp + ": ");
+            if (scanner.hasNextBigDecimal()){
+                input = scanner.nextLine();
+                break;
+            } else {
+                input = scanner.nextLine();
+                PrintLine("Invalid Input: " + input);
+            }
+        }
+        return input;
     }
 }
