@@ -1,3 +1,0 @@
-Current,00001,100,Alice
-Current,00002,150,Bob
-Current,00003,125,Charles
