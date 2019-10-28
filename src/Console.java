@@ -16,7 +16,7 @@ public class Console {
 
         // Initialize the account Account List file
         accountManage = new AccountManage();
-        reader = new Reader("./src/AccountList.txt");
+        reader = new Reader("AccountList.txt");
 
         String str;
         do{
