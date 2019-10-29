@@ -13,12 +13,12 @@ This is a Bank Current Account Simulator, which simulate the following functions
 1. Clone the repository
 1. Locate to 'src' directory
 1. Complile class to 'dist' directory<br />
-  `javac -classpath src/;src/model;src/service;src/util -d dist src/*.java`
+  `javac -classpath src/main/;src/main/model;src/main/service;src/main/util -d dist src/main/*.java`
 1. Copy AccountList.txt to 'dist' directory<br />
   Linux:<br />
-  `cp src/AccountList.txt dist/`<br />
+  `cp src/main/AccountList.txt dist/`<br />
   Windows:<br />
-  `copy src\AccountList.txt dist\`
+  `copy src\main\AccountList.txt dist\`
 1. Run the app<br />
   `cd dist`<br />
   `java -classpath ./;./model;./service;./util Console`
