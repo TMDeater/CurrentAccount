@@ -38,11 +38,11 @@ public class Printer {
     public static void PrintDepositWithdraw(int a, BigDecimal amount, BigDecimal amtAfterDeposit){
         String action = new String();
         if (a == 0){
-            action = "deposited";
+            action = "deposited to";
         } else if (a == 1){
-            action = "withdrawn";
+            action = "withdrawn from";
         }
-        PrintLine("$"+amount + " had been "+action+" to your account,");
+        PrintLine("$"+amount + " had been "+action+" your account,");
         PrintLine("Current balance: $"+ amtAfterDeposit);
     }
 

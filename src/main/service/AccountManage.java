@@ -53,7 +53,6 @@ public class AccountManage implements AccountDepositWithdraw{
         }
         Account newAccount = new Account(id, balance, customerName);
         accountList.add(newAccount);
-        PrintLine("ID: " + id + "created");
         return 0;
     }
 

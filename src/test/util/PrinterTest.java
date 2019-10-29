@@ -56,6 +56,6 @@ public class PrinterTest {
         BigDecimal amt = new BigDecimal("100.1");
         BigDecimal amtafter = new BigDecimal("150.11");
         PrintDepositWithdraw(1, amt, amtafter);
-        Assert.assertEquals("$100.1 had been withdrawn to your account,\r\nCurrent balance: $150.11\r\n", out.toString());
+        Assert.assertEquals("$100.1 had been withdrawn from your account,\r\nCurrent balance: $150.11\r\n", out.toString());
     }
 }

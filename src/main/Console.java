@@ -16,6 +16,7 @@ public class Console {
 
         // Initialize the account Account List file
         accountManage = new AccountManage();
+//        reader = new Reader("./src/main/AccountList.txt");    // for unit test
         reader = new Reader("AccountList.txt");
 
         String str;
